@@ -1,6 +1,6 @@
 'use strict'
 
-import nodemailer from 'nodemailer'
+const nodemailer=require('nodemailer')
 
 if(typeof logger === 'undefined'){
     global.logger=console
@@ -48,7 +48,7 @@ async function start() {
 
 if (process.env.NODEMAILER_SERVICE && !transporter) start()
 
-export function sendEmail(options = {}) {
+function sendEmail(options = {}) {
   logger.log('Sending email', options)
   return new Promise(async (pass, fail) => {
     if (!process.env.NODEMAILER_SERVICE)
@@ -65,4 +65,5 @@ export function sendEmail(options = {}) {
     }
   })
 }
-export default sendEmail
+module.exports.sendEmail=sendEmail
+module.exports.default=sendEmail
