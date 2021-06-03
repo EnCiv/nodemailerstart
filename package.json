@@ -1,0 +1,15 @@
+{
+  "name": "nodemailerstart",
+  "version": "1.0.0",
+  "description": "start nodemailer from env variables to send_email",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodemailer",
+    "env"
+  ],
+  "author": "David Fridley",
+  "license": "MIT"
+}
