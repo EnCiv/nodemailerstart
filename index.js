@@ -65,5 +65,5 @@ function sendEmail(options = {}) {
     }
   })
 }
-module.exports.sendEmail=sendEmail
-module.exports.default=sendEmail
+module.exports=sendEmail
+
